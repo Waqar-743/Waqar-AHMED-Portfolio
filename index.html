@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waqar Ahmed | Expert WordPress Designer, Developer & SEO Specialist</title>
+    <meta name="description" content="Hire Waqar Ahmed, a professional freelance WordPress designer, developer, and SEO specialist. I build custom, responsive, and SEO-optimized websites for businesses and individuals." />
+    <meta name="keywords" content="Waqar Ahmed, WordPress Developer, Web Designer, SEO Specialist, Freelancer, Custom Websites, Responsive Design, Elementor, Divi, On-Page SEO, Technical SEO" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              mono: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              // Dark Theme (Original)
+              'navy': '#0a192f',
+              'light-navy': '#112240',
+              'lightest-navy': '#233554',
+              'slate': '#8892b0',
+              'light-slate': '#a8b2d1',
+              'lightest-slate': '#ccd6f6',
+              'brand-accent': '#ffcc00',
+              
+              // Light Theme
+              'light-bg': '#f8f9fa',
+              'light-card': '#ffffff',
+              'light-text-primary': '#212529',
+              'light-text-secondary': '#495057',
+              'light-border': '#dee2e6',
+              'light-accent': '#ffcc00',
+
+              // New Brand Colors for Experience Section
+              'brand-dark': '#111111',
+              'brand-card': '#1a1a1a',
+              'brand-yellow': '#fec544',
+              'brand-light-text': '#cccccc',
+            },
+            animation: {
+              'engaging-loader': 'engaging-loader 2.5s ease-in-out infinite',
+            },
+            keyframes: {
+              'engaging-loader': {
+                '0%': {
+                  transform: 'scale(1) rotate(0deg)',
+                  opacity: 0.8,
+                },
+                '50%': {
+                  transform: 'scale(1.15) rotate(180deg)',
+                  opacity: 1,
+                },
+                '100%': {
+                  transform: 'scale(1) rotate(360deg)',
+                  opacity: 0.8,
+                },
+              },
+            },
+          },
+        },
+      }
+    </script>
+     <style>
+      html {
+        scroll-padding-top: 100px;
+      }
+      body {
+        font-family: 'Montserrat', 'sans-serif';
+      }
+      /* Dark Scrollbar */
+      .dark ::-webkit-scrollbar {
+        width: 8px;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #111111; /* Use new dark color */
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #233554;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #303C55;
+      }
+      /* Light Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8f9fa;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #dee2e6;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ced4da;
+      }
+      /* Hide scrollbar utility */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      /* Shared Carousel Root Variables */
+      :root {
+        --swiper-nav-color: #ffcc00;
+        --swiper-pagination-bullet-color: #495057;
+        --swiper-pagination-bullet-active-color: #ffcc00;
+      }
+      .dark {
+        --swiper-nav-color: #ffcc00;
+        --swiper-pagination-bullet-color: #8892b0;
+        --swiper-pagination-bullet-active-color: #ffcc00;
+      }
+
+      /* Testimonial Carousel Styles */
+      .testimonial-swiper {
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+      }
+      .testimonial-swiper .swiper-slide {
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        transform: scale(0.85);
+        opacity: 0.6;
+      }
+      .testimonial-swiper .swiper-slide-active {
+        transform: scale(1);
+        opacity: 1;
+      }
+      .testimonial-card.swiper-slide-active {
+        border-color: var(--swiper-pagination-bullet-active-color);
+      }
+      .testimonial-swiper .swiper-button-next,
+      .testimonial-swiper .swiper-button-prev {
+        color: var(--swiper-nav-color);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .testimonial-swiper .swiper-button-next:after,
+      .testimonial-swiper .swiper-button-prev:after {
+        font-size: 2rem;
+      }
+      .testimonial-swiper .swiper-pagination-bullet {
+        background-color: var(--swiper-pagination-bullet-color);
+        opacity: 1;
+      }
+      .testimonial-swiper .swiper-pagination-bullet-active {
+        background-color: var(--swiper-pagination-bullet-active-color);
+      }
+
+      /* Project Carousel Styles */
+      .project-swiper {
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+      }
+      .project-swiper .swiper-slide {
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        transform: scale(0.85);
+        opacity: 0.7;
+      }
+      .project-swiper .swiper-slide-active {
+        transform: scale(1);
+        opacity: 1;
+      }
+      .project-swiper .swiper-button-next,
+      .project-swiper .swiper-button-prev {
+        color: var(--swiper-nav-color);
+        top: 35%;
+        transform: translateY(-50%);
+      }
+      .project-swiper .swiper-button-next:after,
+      .project-swiper .swiper-button-prev:after {
+        font-size: 2rem;
+      }
+      .project-swiper .swiper-pagination-bullet {
+        background-color: var(--swiper-pagination-bullet-color);
+        opacity: 1;
+      }
+      .project-swiper .swiper-pagination-bullet-active {
+        background-color: var(--swiper-pagination-bullet-active-color);
+      }
+
+      /* Modal Styles */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes scaleUp {
+        from { transform: scale(0.95) translateY(10px); opacity: 0; }
+        to { transform: scale(1) translateY(0); opacity: 1; }
+      }
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(17, 17, 17, 0.85); /* brand-dark with opacity */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+        padding: 1rem;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      .light .modal-overlay {
+        background-color: rgba(33, 37, 41, 0.85); /* light-text-primary with opacity */
+      }
+      .modal-content {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        max-height: 90vh;
+        animation: scaleUp 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+      }
+      .modal-close-btn {
+        position: absolute;
+        top: -2.5rem;
+        right: 0;
+        color: #ccd6f6; /* lightest-slate */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: transform 0.2s ease;
+      }
+      .modal-close-btn:hover {
+        transform: scale(1.1);
+      }
+      .light .modal-close-btn {
+        color: #f8f9fa; /* light-bg */
+      }
+      @media (max-width: 768px) {
+        .modal-close-btn {
+          top: 0.5rem;
+          right: 0.5rem;
+          background-color: rgba(0,0,0,0.5);
+          border-radius: 50%;
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CR7ircZz.js"></script>
+</head>
+  <body class="bg-light-bg text-light-text-secondary dark:bg-brand-dark dark:text-slate">
+    <div id="root"></div>
+  </body>
+</html>
