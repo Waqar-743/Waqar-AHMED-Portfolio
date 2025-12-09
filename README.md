@@ -32,32 +32,12 @@ This is my personal portfolio built to:
 
 ---
 
-## 📸 Features
-
-✅ Responsive and mobile-friendly design  
-✅ Clean and modern UI  
-✅ Projects section with live links  
-✅ Contact form (or social media links)  
-✅ Smooth animations and transitions  
+ 
 
 ---
 
 ## ⚙️ Installation & Setup (Local Development)
 
-If you want to run this project locally:
-
-```bash
-# Clone this repository
-git clone[ https:http://localhost:3000/Waqar-AHMED-Portfolio/#
-
-# Navigate into the project folder
-cd Waqar-AHMED-Portfolio
-
-# Install dependencies (if React or Node project)
-npm install
-
-# Run the development server
-npm start
 
 # Visit in your browser
 http://localhost:3000
