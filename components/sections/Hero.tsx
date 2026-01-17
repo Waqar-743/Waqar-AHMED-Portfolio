@@ -67,44 +67,41 @@ const Hero: React.FC<HeroProps> = ({ onHireMeClick }) => {
         willChange: 'background-position',
       }}
     >
-      <div className="absolute inset-0 bg-light-bg/60 dark:bg-navy/80"></div>
-
-      {/* Flickering Grid - Only in Dark Mode */}
-      {theme === 'dark' && (
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <FlickeringGrid
-            className="w-full h-full"
-            squareSize={4}
-            gridGap={6}
-            color="#6B7280"
-            maxOpacity={0.4}
-            flickerChance={0.1}
-          />
-        </div>
-      )}
+      <div className="absolute inset-0 bg-light-bg/40 dark:bg-black/90"></div>
+      {/* Flickering Grid - Both Modes */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <FlickeringGrid
+          className="w-full h-full"
+          squareSize={4}
+          gridGap={6}
+          color={theme === 'dark' ? '#6B7280' : '#cbd5e1'}
+          maxOpacity={theme === 'dark' ? 0.4 : 0.2}
+          flickerChance={0.1}
+        />
+      </div>
 
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24 relative z-10">
         <div>
           <p
-            className={`text-light-accent dark:text-brand-accent font-mono text-md mb-4 transition-all duration-500 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+            className={`text-slate-900 dark:text-brand-accent font-mono text-md mb-4 transition-all duration-500 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
             style={{ transitionDelay: '100ms' }}
           >
             I Am
           </p>
           <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-light-text-primary dark:text-lightest-slate transition-all duration-500 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-lightest-slate transition-all duration-500 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
             style={{ transitionDelay: '200ms' }}
           >
             WAQAR AHMED.
           </h1>
           <h2
-            className={`text-2xl sm:text-3xl md:text-4xl font-bold text-light-text-secondary dark:text-slate mt-2 max-w-3xl mx-auto transition-all duration-500 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate mt-2 max-w-3xl mx-auto transition-all duration-500 ease-out ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
             style={{ transitionDelay: '400ms' }}
           >
             AI-Powered WordPress Website Designer & Freelancer
           </h2>
           <p
-            className={`mt-6 max-w-xl lg:max-w-2xl text-base sm:text-lg transition-all duration-500 ease-out mx-auto ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+            className={`mt-6 max-w-xl lg:max-w-2xl text-base sm:text-lg text-slate-800 dark:text-slate transition-all duration-500 ease-out mx-auto ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
             style={{ transitionDelay: '600ms' }}
           >
             I design responsive, results-driven websites that attract the right audience, build credibility, and help your brand stand out
@@ -115,7 +112,7 @@ const Hero: React.FC<HeroProps> = ({ onHireMeClick }) => {
             style={{ transitionDelay: '700ms' }}
           >
             {socialIcons.map((social) => (
-              <a key={social.href} href={social.href} target="_blank" rel="noopener noreferrer" className="text-light-text-secondary dark:text-slate hover:text-light-accent dark:hover:text-brand-accent transform hover:-translate-y-1 transition-all duration-300">
+              <a key={social.href} href={social.href} target="_blank" rel="noopener noreferrer" className="text-slate-800 dark:text-slate hover:text-light-accent dark:hover:text-brand-accent transform hover:-translate-y-1 transition-all duration-300">
                 {social.icon}
               </a>
             ))}
