@@ -54,14 +54,14 @@ const About: React.FC = () => {
         </div>
       )}
 
-      <div className="relative z-10">
-        <h2 className={`flex items-center text-2xl font-bold text-light-text-primary dark:text-lightest-slate mb-8 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          <span className="text-light-accent dark:text-brand-accent font-mono text-xl mr-3">01.</span>
+      <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
+        <h2 className={`flex items-center text-2xl font-bold text-black dark:text-lightest-slate mb-8 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <span className="text-black dark:text-brand-accent font-mono text-xl mr-3">01.</span>
           About Me
-          <span className="flex-grow h-px bg-light-border dark:bg-lightest-navy ml-4"></span>
+          <span className="flex-grow h-px bg-zinc-300 dark:bg-lightest-navy ml-4"></span>
         </h2>
         <div className={`grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '150ms' }}>
-          <div className="md:col-span-3 space-y-4 text-base md:text-lg text-light-text-secondary dark:text-slate">
+          <div className="md:col-span-3 space-y-4 text-base md:text-lg text-zinc-900 dark:text-slate">
             <p>
               I'm a Web Designer and Developer with over 2 years of experience. I've collaborated with local clients to build diverse projects—including portfolio sites, service pages, landing pages, business sites, and ecommerce platforms—ensuring a perfect blend of design aesthetics and functionality.
             </p>
@@ -74,7 +74,7 @@ const About: React.FC = () => {
             <p>Here are a few technologies I’ve been working with recently:</p>
             <div className="flex flex-wrap gap-x-2 gap-y-3 sm:gap-4 mt-4">
               {SKILLS.map(skill => (
-                <div key={skill} className="bg-light-card dark:bg-brand-card border border-light-border dark:border-lightest-navy/40 text-light-text-secondary dark:text-light-slate font-mono text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded-md shadow-sm transition-all duration-300 hover:shadow-md hover:border-light-accent dark:hover:border-brand-accent hover:text-light-accent dark:hover:text-brand-accent hover:-translate-y-0.5 cursor-default">
+                <div key={skill} className="bg-light-card dark:bg-brand-card border border-zinc-300 dark:border-lightest-navy/40 text-black dark:text-light-slate font-mono text-sm px-3 py-1.5 sm:px-4 sm:py-2 rounded-md shadow-sm transition-all duration-300 hover:shadow-md hover:border-black dark:hover:border-brand-accent hover:text-black dark:hover:text-brand-accent hover:-translate-y-0.5 cursor-default">
                   {skill}
                 </div>
               ))}

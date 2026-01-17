@@ -9,8 +9,8 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
     return (
         <div className="bg-light-card dark:bg-brand-card p-5 sm:p-6 rounded-lg border border-light-border dark:border-lightest-navy/40 hover:border-light-accent/50 dark:hover:border-brand-accent/50 transition-all duration-300 hover:-translate-y-1">
             {skill.icon}
-            <h3 className="text-xl font-bold text-light-text-primary dark:text-lightest-slate">{skill.name}</h3>
-            <p className="mt-2 text-light-text-secondary dark:text-slate text-sm h-16">{skill.description}</p>
+            <h3 className="text-xl font-bold text-black dark:text-lightest-slate">{skill.name}</h3>
+            <p className="mt-2 text-zinc-900 dark:text-slate text-sm h-16">{skill.description}</p>
             <div className="mt-4">
                 <div className="flex justify-end mb-1">
                     <span className="text-sm font-medium font-mono text-light-accent dark:text-brand-accent">{skill.score}%</span>
@@ -40,11 +40,11 @@ const ExperienceSection: React.FC = () => (
         {EXPERIENCE_DATA.map((exp, index) => (
             <div key={index} className="bg-light-card dark:bg-brand-card p-5 sm:p-6 rounded-lg border border-light-border dark:border-lightest-navy/40 hover:border-light-accent/50 dark:hover:border-brand-accent/50 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row justify-between sm:items-baseline">
-                    <h3 className="text-xl font-bold text-light-text-primary dark:text-lightest-slate">{exp.role}</h3>
-                    <p className="text-sm text-light-text-secondary dark:text-slate mt-1 sm:mt-0">{exp.duration}</p>
+                    <h3 className="text-xl font-bold text-black dark:text-lightest-slate">{exp.role}</h3>
+                    <p className="text-sm text-zinc-900 dark:text-slate mt-1 sm:mt-0">{exp.duration}</p>
                 </div>
-                <h4 className="text-lg font-semibold text-light-text-secondary dark:text-light-slate">{exp.company}</h4>
-                <ul className="mt-4 list-disc list-inside space-y-2 text-light-text-secondary dark:text-slate">
+                <h4 className="text-lg font-semibold text-zinc-900 dark:text-light-slate">{exp.company}</h4>
+                <ul className="mt-4 list-disc list-inside space-y-2 text-zinc-900 dark:text-slate">
                     {exp.duties.map((duty, i) => <li key={i}>{duty}</li>)}
                 </ul>
             </div>
@@ -53,15 +53,15 @@ const ExperienceSection: React.FC = () => (
 );
 
 const EducationSection: React.FC = () => (
-     <div className="space-y-8">
+    <div className="space-y-8">
         {EDUCATION_DATA.map((edu, index) => (
             <div key={index} className="bg-light-card dark:bg-brand-card p-5 sm:p-6 rounded-lg border border-light-border dark:border-lightest-navy/40 hover:border-light-accent/50 dark:hover:border-brand-accent/50 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row justify-between sm:items-baseline">
-                    <h3 className="text-xl font-bold text-light-text-primary dark:text-lightest-slate">{edu.institution}</h3>
-                    <p className="text-sm text-light-text-secondary dark:text-slate mt-1 sm:mt-0">{edu.duration}</p>
+                    <h3 className="text-xl font-bold text-black dark:text-lightest-slate">{edu.institution}</h3>
+                    <p className="text-sm text-zinc-900 dark:text-slate mt-1 sm:mt-0">{edu.duration}</p>
                 </div>
-                <h4 className="text-lg font-semibold text-light-text-secondary dark:text-light-slate">{edu.degree}</h4>
-                 <ul className="mt-4 list-disc list-inside space-y-2 text-light-text-secondary dark:text-slate">
+                <h4 className="text-lg font-semibold text-zinc-900 dark:text-light-slate">{edu.degree}</h4>
+                <ul className="mt-4 list-disc list-inside space-y-2 text-zinc-900 dark:text-slate">
                     {edu.details.map((detail, i) => <li key={i}>{detail}</li>)}
                 </ul>
             </div>
@@ -72,7 +72,7 @@ const EducationSection: React.FC = () => (
 const CertificateSection: React.FC = () => (
     <div className="space-y-6">
         {CERTIFICATE_DATA.map((cert, index) => (
-             <div key={index} className="bg-light-card dark:bg-brand-card p-5 sm:p-6 rounded-lg border border-light-border dark:border-lightest-navy/40 hover:border-light-accent/50 dark:hover:border-brand-accent/50 transition-all duration-300 flex flex-col">
+            <div key={index} className="bg-light-card dark:bg-brand-card p-5 sm:p-6 rounded-lg border border-light-border dark:border-lightest-navy/40 hover:border-light-accent/50 dark:hover:border-brand-accent/50 transition-all duration-300 flex flex-col">
                 <div className="flex-grow">
                     <h3 className="text-xl font-bold text-light-text-primary dark:text-lightest-slate">{cert.name}</h3>
                     <div className="flex flex-col sm:flex-row justify-between sm:items-baseline mt-1">
@@ -83,9 +83,9 @@ const CertificateSection: React.FC = () => (
                 </div>
                 {cert.link && (
                     <div className="mt-4 self-end">
-                         <a 
+                        <a
                             href={cert.link}
-                            target="_blank" 
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block text-light-accent dark:text-brand-accent border border-light-accent dark:border-brand-accent rounded px-5 py-2 font-mono text-sm transform transition-all duration-300 ease-in-out hover:bg-light-accent/10 dark:hover:bg-brand-accent/10 hover:-translate-y-1 hover:shadow-lg"
                         >
@@ -100,47 +100,47 @@ const CertificateSection: React.FC = () => (
 
 // --- GHOST CURSOR IMPLEMENTATION ---
 const useMousePosition = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            setMousePosition({ x: event.clientX, y: event.clientY });
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
 
-  return mousePosition;
+    return mousePosition;
 };
 
 const GhostCursor: React.FC = () => {
-  const { x, y } = useMousePosition();
-  const cursorSize = 40; // 20px radius
+    const { x, y } = useMousePosition();
+    const cursorSize = 40; // 20px radius
 
-  return (
-    <motion.div
-      className="fixed top-0 left-0 rounded-full bg-brand-accent pointer-events-none mix-blend-screen"
-      style={{
-        width: cursorSize,
-        height: cursorSize,
-        opacity: 0.5,
-        filter: 'blur(15px)',
-        zIndex: 9999,
-      }}
-      animate={{
-        x: x - cursorSize / 2,
-        y: y - cursorSize / 2,
-      }}
-      transition={{
-        type: 'spring',
-        stiffness: 400,
-        damping: 40,
-        mass: 0.5,
-      }}
-    />
-  );
+    return (
+        <motion.div
+            className="fixed top-0 left-0 rounded-full bg-brand-accent pointer-events-none mix-blend-screen"
+            style={{
+                width: cursorSize,
+                height: cursorSize,
+                opacity: 0.5,
+                filter: 'blur(15px)',
+                zIndex: 9999,
+            }}
+            animate={{
+                x: x - cursorSize / 2,
+                y: y - cursorSize / 2,
+            }}
+            transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 40,
+                mass: 0.5,
+            }}
+        />
+    );
 };
 // --- END GHOST CURSOR IMPLEMENTATION ---
 
@@ -152,7 +152,7 @@ const Experience: React.FC = () => {
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
-      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+        setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
     }, []);
 
     const tabs = [
@@ -177,58 +177,59 @@ const Experience: React.FC = () => {
     };
 
     return (
-        <section 
-            id="experience" 
+        <section
+            id="experience"
             className="py-24"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
-             {theme === 'dark' && isHovering && !isTouchDevice && <GhostCursor />}
-             <h2 className="flex items-center text-2xl font-bold text-light-text-primary dark:text-lightest-slate mb-12">
-                <span className="text-light-accent dark:text-brand-accent font-mono text-xl mr-3">02.</span>
-                My Experience Journey
-                <span className="flex-grow h-px bg-light-border dark:bg-lightest-navy ml-4"></span>
-            </h2>
-            
-            <div className="flex flex-col gap-8">
-                {/* Horizontal Tab Buttons */}
-                <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 border-b border-light-border dark:border-lightest-navy/40 pb-5">
-                    {tabs.map(tab => (
-                        <button
-                            key={tab.name}
-                            onClick={() => setActiveTab(tab.name)}
-                            className={`flex items-center py-3 px-4 rounded-md transition-colors duration-300 text-sm sm:text-base font-medium relative ${
-                                activeTab === tab.name
+            <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
+                {theme === 'dark' && isHovering && !isTouchDevice && <GhostCursor />}
+                <h2 className="flex items-center text-2xl font-bold text-black dark:text-lightest-slate mb-12">
+                    <span className="text-black dark:text-brand-accent font-mono text-xl mr-3">02.</span>
+                    My Experience Journey
+                    <span className="flex-grow h-px bg-zinc-300 dark:bg-lightest-navy ml-4"></span>
+                </h2>
+
+                <div className="flex flex-col gap-8">
+                    {/* Horizontal Tab Buttons */}
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 border-b border-light-border dark:border-lightest-navy/40 pb-5">
+                        {tabs.map(tab => (
+                            <button
+                                key={tab.name}
+                                onClick={() => setActiveTab(tab.name)}
+                                className={`flex items-center py-3 px-4 rounded-md transition-colors duration-300 text-sm sm:text-base font-medium relative ${activeTab === tab.name
                                     ? 'text-light-accent dark:text-brand-accent'
                                     : 'text-light-text-secondary dark:text-slate hover:bg-light-accent/10 dark:hover:bg-brand-card'
-                            }`}
-                        >
-                            {tab.icon}
-                            <span>{tab.name}</span>
-                            {activeTab === tab.name && (
-                                <motion.div
-                                    className="absolute bottom-[-21px] left-0 right-0 h-0.5 bg-light-accent dark:bg-brand-accent"
-                                    layoutId="underline"
-                                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                                />
-                            )}
-                        </button>
-                    ))}
-                </div>
+                                    }`}
+                            >
+                                {tab.icon}
+                                <span>{tab.name}</span>
+                                {activeTab === tab.name && (
+                                    <motion.div
+                                        className="absolute bottom-[-21px] left-0 right-0 h-0.5 bg-light-accent dark:bg-brand-accent"
+                                        layoutId="underline"
+                                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                                    />
+                                )}
+                            </button>
+                        ))}
+                    </div>
 
-                {/* Content */}
-                <div className="mt-4">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={activeTab}
-                            initial="initial"
-                            animate="animate"
-                            exit="exit"
-                            variants={contentAnimation}
-                        >
-                            {contentMap[activeTab]}
-                        </motion.div>
-                    </AnimatePresence>
+                    {/* Content */}
+                    <div className="mt-4">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeTab}
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                                variants={contentAnimation}
+                            >
+                                {contentMap[activeTab]}
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
         </section>

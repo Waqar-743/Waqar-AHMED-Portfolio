@@ -33,18 +33,20 @@ const Contact: React.FC = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-24 text-center max-w-2xl mx-auto" ref={sectionRef}>
-       <p className={`font-mono text-light-accent dark:text-brand-accent mb-4 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '100ms' }}>05. What’s Next?</p>
-      <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold text-light-text-primary dark:text-lightest-slate mb-4 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '200ms' }}>Get In Touch</h2>
-      <p className={`text-base md:text-lg mb-8 transition-all duration-500 ease-out text-light-text-secondary dark:text-slate ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '300ms' }}>
-        I'm always excited to discuss new projects and opportunities. Fill out the form below, and I'll get back to you as soon as possible.
-      </p>
-      
-      <div 
-        className={`w-full mx-auto mt-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} 
-        style={{ transitionDelay: '400ms' }}
-      >
-        <ContactForm idPrefix="section-contact" />
+    <section id="contact" className="py-24 text-center" ref={sectionRef}>
+      <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24 max-w-4xl">
+        <p className={`font-mono text-black dark:text-brand-accent mb-4 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '100ms' }}>05. What’s Next?</p>
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-lightest-slate mb-4 transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '200ms' }}>Get In Touch</h2>
+        <p className={`text-base md:text-lg mb-8 transition-all duration-500 ease-out text-zinc-900 dark:text-slate ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '300ms' }}>
+          I'm always excited to discuss new projects and opportunities. Fill out the form below, and I'll get back to you as soon as possible.
+        </p>
+
+        <div
+          className={`w-full mx-auto mt-12 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+          style={{ transitionDelay: '400ms' }}
+        >
+          <ContactForm idPrefix="section-contact" />
+        </div>
       </div>
     </section>
   );

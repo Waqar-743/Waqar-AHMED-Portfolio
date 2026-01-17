@@ -20,7 +20,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); 
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -36,7 +36,7 @@ const App: React.FC = () => {
       <SocialLinks />
       <EmailLink />
       <Hero onHireMeClick={() => setIsHireMeModalOpen(true)} />
-      <main id="content" className="flex-grow container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
+      <main id="content" className="flex-grow">
         <About />
         <Experience />
         <Projects />
