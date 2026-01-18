@@ -216,8 +216,9 @@ export default function Galaxy({
     let program;
 
     function resize() {
-      const scale = 1.0;
-      renderer.setSize(ctn.offsetWidth * scale, ctn.offsetHeight * scale);
+      const width = ctn.offsetWidth || window.innerWidth;
+      const height = ctn.offsetHeight || window.innerHeight;
+      renderer.setSize(width, height);
       if (program) {
         program.uniforms.uResolution.value = new Color(
           gl.canvas.width,
@@ -226,6 +227,16 @@ export default function Galaxy({
         );
       }
     }
+
+    // Initial size and style
+    gl.canvas.style.display = 'block';
+    gl.canvas.style.width = '100vw';
+    gl.canvas.style.height = '100vh';
+    gl.canvas.style.position = 'fixed';
+    gl.canvas.style.top = '0';
+    gl.canvas.style.left = '0';
+    gl.canvas.style.pointerEvents = 'none';
+
     window.addEventListener('resize', resize, false);
     resize();
 

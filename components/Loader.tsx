@@ -11,7 +11,7 @@ const Loader: React.FC = () => {
       {theme === 'dark' && (
         <div className="absolute inset-0 z-0 dark:opacity-60 pointer-events-none">
           <Galaxy
-            density={1.8}
+            density={1.2}
             glowIntensity={0.2}
             saturation={0.4}
             hueShift={50}
