@@ -9,18 +9,19 @@ const Loader: React.FC = () => {
     <div className="flex items-center justify-center h-screen bg-light-bg dark:bg-navy relative overflow-hidden">
       {/* Solar Blinking Background (Galaxy) - Only in Dark Mode */}
       {theme === 'dark' && (
-        <div className="absolute inset-0 z-0 dark:opacity-60 pointer-events-none">
+        <div className="absolute inset-0 z-0 pointer-events-none">
           <Galaxy
-            density={1.2}
-            glowIntensity={0.2}
-            saturation={0.4}
+            density={0.8}
+            glowIntensity={0.15}
+            saturation={0.3}
             hueShift={50}
-            twinkleIntensity={0.5}
-            rotationSpeed={0.05}
-            repulsionStrength={1}
-            starSpeed={0.2}
-            speed={0.1}
+            twinkleIntensity={0.3}
+            rotationSpeed={0.03}
+            repulsionStrength={0}
+            starSpeed={0.1}
+            speed={0.08}
             mouseRepulsion={false}
+            mouseInteraction={false}
           />
         </div>
       )}

@@ -16,7 +16,7 @@ void main() {
 `;
 
 const fragmentShader = `
-precision highp float;
+precision mediump float;
 
 uniform float uTime;
 uniform vec3 uResolution;
@@ -39,7 +39,7 @@ uniform bool uTransparent;
 
 varying vec2 vUv;
 
-#define NUM_LAYER 4.0
+#define NUM_LAYER 2.0
 #define STAR_COLOR_CUTOFF 0.2
 #define MAT45 mat2(0.7071, -0.7071, 0.7071, 0.7071)
 #define PERIOD 3.0
@@ -201,7 +201,8 @@ export default function Galaxy({
     const ctn = ctnDom.current;
     const renderer = new Renderer({
       alpha: transparent,
-      premultipliedAlpha: false
+      premultipliedAlpha: false,
+      dpr: Math.min(window.devicePixelRatio, 1.5)
     });
     const gl = renderer.gl;
 
@@ -230,9 +231,9 @@ export default function Galaxy({
 
     // Initial size and style
     gl.canvas.style.display = 'block';
-    gl.canvas.style.width = '100vw';
-    gl.canvas.style.height = '100vh';
-    gl.canvas.style.position = 'fixed';
+    gl.canvas.style.width = '100%';
+    gl.canvas.style.height = '100%';
+    gl.canvas.style.position = 'absolute';
     gl.canvas.style.top = '0';
     gl.canvas.style.left = '0';
     gl.canvas.style.pointerEvents = 'none';

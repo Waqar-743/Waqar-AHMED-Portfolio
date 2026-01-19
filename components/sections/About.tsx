@@ -40,16 +40,17 @@ const About: React.FC = () => {
       {theme === 'dark' && (
         <div className="absolute inset-0 -z-10 dark:opacity-60 pointer-events-none">
           <Galaxy
-            density={1.8}
-            glowIntensity={0.2}
-            saturation={0.4}
+            density={0.8}
+            glowIntensity={0.15}
+            saturation={0.3}
             hueShift={50}
-            twinkleIntensity={0.5}
-            rotationSpeed={0.05}
-            repulsionStrength={1}
-            starSpeed={0.2}
-            speed={0.1}
+            twinkleIntensity={0.3}
+            rotationSpeed={0.03}
+            repulsionStrength={0}
+            starSpeed={0.1}
+            speed={0.08}
             mouseRepulsion={false}
+            mouseInteraction={false}
           />
         </div>
       )}
